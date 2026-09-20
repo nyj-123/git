@@ -1,0 +1,22 @@
+{
+    // CMake 工具链（WinLibs 自带 cmake + ninja，无需另装）
+    "cmake.cmakePath": "D:/Tools/WinLibs/mingw64/bin/cmake.exe",
+    "cmake.generator": "Ninja",
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.configureOnOpen": true,
+    "cmake.parallelJobs": 0,
+
+    // IntelliSense / 语言服务
+    "C_Cpp.default.compilerPath": "D:/Tools/WinLibs/mingw64/bin/g++.exe",
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
+
+    // code-runner：在终端里跑，支持 cin 交互输入
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+
+    "files.eol": "\n",
+    "editor.formatOnSave": false
+}

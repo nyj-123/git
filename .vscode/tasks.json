@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake 配置",
+            "type": "shell",
+            "command": "D:/Tools/WinLibs/mingw64/bin/cmake.exe",
+            "args": [
+                "-S", "${workspaceFolder}",
+                "-B", "${workspaceFolder}/build",
+                "-G", "Ninja",
+                "-DCMAKE_BUILD_TYPE=Debug"
+            ],
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "CMake 编译",
+            "type": "shell",
+            "command": "D:/Tools/WinLibs/mingw64/bin/cmake.exe",
+            "args": ["--build", "${workspaceFolder}/build", "--parallel"],
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": ["$gcc"],
+            "group": { "kind": "build", "isDefault": true },
+            "dependsOn": "CMake 配置"
+        },
+        {
+            "label": "运行 hello",
+            "type": "shell",
+            "command": "${workspaceFolder}/build/bin/hello.exe",
+            "options": { "cwd": "${workspaceFolder}/build/bin" },
+            "dependsOn": "CMake 编译",
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,14 +1,39 @@
 # 工具工作目录（非代码）
 .workbuddy/
 
-# C++ 编译产物
+# CMake / 构建产物
+build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+compile_commands.json
+.cache/
+
+# 编译产物
 *.exe
 *.o
 *.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
 *.out
 *.gch
+*.pch
 *.dSYM/
 
-# 编辑器
-.vscode/
+# 编辑器：共享工程配置，只忽略个人化文件
+.vscode/*
+!.vscode/settings.json
+!.vscode/c_cpp_properties.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 .idea/
+
+# 系统杂项
+Thumbs.db
+.DS_Store
