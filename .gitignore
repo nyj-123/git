@@ -1,0 +1,14 @@
+# 工具工作目录（非代码）
+.workbuddy/
+
+# C++ 编译产物
+*.exe
+*.o
+*.obj
+*.out
+*.gch
+*.dSYM/
+
+# 编辑器
+.vscode/
+.idea/
